@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Drawer Counter</title>
+  <link rel="stylesheet" href="cash-drawer-counter.css">
+</head>
+<body>
+  <div class="container">
+    <h1><u>Cash Drawer Counter</u></h1>
+    
+    <h3></h3>
+    <form id="cash-form">
+      <div class="row"><label>Pennies (¢1):</label><input type="number" pattern="[0-9]*" inputmode="numeric"  min="0" id="pennies" value=""></div>
+      <div class="row"><label>Nickels (¢5):</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="nickels" value=""></div>
+      <div class="row"><label>Dimes (¢10):</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="dimes" value=""></div>
+      <div class="row"><label>Quarters (¢25):</label><input type="number" pattern="[0-9]*" inputmode="numeric"min="0" id="quarters" value=""></div>
+      <div class="row"><label>Half Dollars (¢50):</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="half-dollars" value=""></div>
+      <div class="row"><label>$1 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="ones" value=""></div>
+      <div class="row"><label>$5 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="fives" value=""></div>
+      <div class="row"><label>$10 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="tens" value=""></div>
+      <div class="row"><label>$20 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="twenties" value=""></div>
+      <div class="row"><label>$50 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="fifties" value=""></div>
+      <div class="row"><label>$100 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="hundreds" value=""></div>
+    </form>
+    <button id="reset-btn" type="button">Reset</button> 
+    <div class="total-row">
+      <span>Total:</span>
+      <span id="total">$0.00</span>
+    </div>
+    <h2> made by Johnathan</h2>
+  </div>
+  <script src="cash-drawer-counter.js"></script>
+  
+</body>
+</html>
