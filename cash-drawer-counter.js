@@ -17,6 +17,7 @@ function updateTotal() {
   denominations.forEach(denom => {
     const count = parseInt(document.getElementById(denom.id).value, 10) || 0;
     total += count * denom.value;
+    document.getElementById(`${denom.id}-total`).textContent = `$${(count * denom.value).toFixed(2)}`;
   });
   document.getElementById('total').textContent = `$${total.toFixed(2)}`;
 }
@@ -32,3 +33,27 @@ document.getElementById('reset-btn').addEventListener('click', () => {
   });
   updateTotal();
 });
+
+
+
+function saveAsPdf() {
+  const doc = new jsPDF();
+  const data = {};
+  denominations.forEach(denom => {
+    data[denom.id] = parseInt(document.getElementById(denom.id).value, 10) || 0;
+  });
+  doc.text('Cash Drawer Report', 10, 10);
+  doc.text('Denomination', 10, 20);
+  doc.text('Quantity', 50, 20);
+  doc.text('Total', 90, 20);
+  let y = 30;
+  denominations.forEach(denom => {
+    doc.text(denom.name, 10, y);
+    doc.text(data[denom.id].toString(), 50, y);
+    doc.text('$' + (data[denom.id] * denom.value).toFixed(2), 90, y);
+    y += 10;
+  });
+  doc.save('cash_drawer_report.pdf');
+}
+
+document.getElementById('save-as-pdf-button').addEventListener('click', saveAsPdf);

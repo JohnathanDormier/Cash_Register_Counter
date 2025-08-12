@@ -12,17 +12,72 @@
     
     <h3></h3>
     <form id="cash-form">
-      <div class="row"><label>Pennies (¢1):</label><input type="number" pattern="[0-9]*" inputmode="numeric"  min="0" id="pennies" value=""></div>
-      <div class="row"><label>Nickels (¢5):</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="nickels" value=""></div>
-      <div class="row"><label>Dimes (¢10):</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="dimes" value=""></div>
-      <div class="row"><label>Quarters (¢25):</label><input type="number" pattern="[0-9]*" inputmode="numeric"min="0" id="quarters" value=""></div>
-      <div class="row"><label>Half Dollars (¢50):</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="half-dollars" value=""></div>
-      <div class="row"><label>$1 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="ones" value=""></div>
-      <div class="row"><label>$5 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="fives" value=""></div>
-      <div class="row"><label>$10 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="tens" value=""></div>
-      <div class="row"><label>$20 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="twenties" value=""></div>
-      <div class="row"><label>$50 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="fifties" value=""></div>
-      <div class="row"><label>$100 Bills:</label><input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="hundreds" value=""></div>
+      <div class="input-container">
+      <div class="row">
+        <label>Pennies (¢1):</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric"  min="0" id="pennies" value="">
+        <span id="pennies-total"></span></div>
+        </div>
+      <div class="input-container">
+      <div class="row">
+        <label>Nickels (¢5):</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="nickels" value="">
+        <span id="nickels-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>Dimes (¢10):</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="dimes" value="">
+        <span id="dimes-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>Quarters (¢25):</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric"min="0" id="quarters" value="">
+        <span id="quarters-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>Half Dollars (¢50):</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="half-dollars" value="">
+        <span id="half-dollars-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>$1 Bills:</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="ones" value="">
+        <span id="ones-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>$5 Bills:</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="fives" value="">
+        <span id="fives-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>$10 Bills:</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="tens" value="">
+        <span id="tens-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>$20 Bills:</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="twenties" value="">
+        <span id="twenties-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>$50 Bills:</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="fifties" value="">
+        <span id="fifties-total"></span></div>
+      </div>
+      <div class="input-container">
+      <div class="row">
+        <label>$100 Bills:</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" min="0" id="hundreds" value="">
+        <span id="hundreds-total"></span></div>
+      </div>
     </form>
     <button id="reset-btn" type="button">Reset</button> 
     <div class="total-row">
@@ -31,7 +86,12 @@
     </div>
     <h2> made by Johnathan</h2>
   </div>
-  <script src="cash-drawer-counter.js"></script>
+
+  <div>
+    <button id="save-as-pdf-button">Save as PDF</button>
+  </div>
   
+  <script src="cash-drawer-counter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 </html>
